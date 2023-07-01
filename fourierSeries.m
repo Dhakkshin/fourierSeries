@@ -16,7 +16,7 @@ a0 = (1/pi) * int(originalFunction, x, -pi, pi);
 % Adding a0 to the fourierSum
 fourierSum = a0/2;
 % Compute the summation from 1 to n
- for n = 1:13
+ for n = 1:15
     %Calculate the coefficients an and bn
     an = (1/pi) * int(originalFunction * cos(n*x), x, -pi, pi);
     bn = (1/pi) * int(originalFunction * sin(n*x), x, -pi, pi);
@@ -43,4 +43,4 @@ ezplot(fourierSum, [-2 * pi, 2 * pi]);
 ylim([-1, 5]);
 
 % Save the plot as an image file (PNG)
-saveas(f, '/MATLAB Drive/fourier_series_plot_n=5.png', 'png');
+saveas(f, '/MATLAB Drive/fourier_series_plot_n=15.png', 'png');
